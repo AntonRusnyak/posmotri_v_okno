@@ -52,10 +52,9 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 711px 399px;
+  grid-template-columns: 711px auto;
   align-content: end;
   gap: 30px;
-  inline-size: 1140px;
 }
 
 /*RESULT*/
@@ -75,6 +74,7 @@ ol {
   inline-size: 711px;
   block-size: 386px;
   position: relative;
+  border: none;
 }
 
 .result__video {
@@ -162,7 +162,9 @@ fieldset {
 }
 
 .search-form__pseudo-checkbox {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 19px;
   block-size: 19px;
   border: 1px solid #fff;
@@ -170,16 +172,16 @@ fieldset {
 }
 
 input[type='checkbox']:checked + .search-form__pseudo-checkbox::after{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 15px;
   block-size: 15px;
   background-color: #fff;
   content: '';
-  display: block;
-  margin: auto;
-  margin-block-start: 1px;
 }
 
-.search-form__checkbox:hover, .search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 1px;
@@ -260,6 +262,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after{
   block-size: 298px;
   overflow: auto;
   position: relative;
+  margin-block-end: 5px;
 }
 
 /*ТЕМПЛЕЙТЫ*/
